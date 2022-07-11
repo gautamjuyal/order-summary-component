@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:16px;
+    color:hsl(223, 47%, 23%);
+    /* border:1px solid black; */
+}
+
+.container{
+    font-family: 'Red Hat Display', sans-serif;
+    z-index:2;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    /* background-color:hsl(225, 100%, 94%); */
+    
+}
+
+.container::before{
+    content:'';
+    height:calc(100vh + 8rem);
+    width:100%;
+    background-image:url("pattern-background-desktop.svg");
+    z-index:-1;
+    background-repeat:no-repeat;
+    background-size:contain;
+    position:absolute;
+    transform:translateY(-4rem);
+    background-color:hsl(225, 100%, 94%);
+}
+
+.order-summary-card{
+    display:flex;
+    flex-direction:column;
+    width:350px;
+    border-radius:15px;
+    align-items:center;
+    background:white;
+}
+
+.order-summary-card h1{
+    font-weight: 900;
+    font-size:1.5rem;
+}
+
+.order-summary-card p{
+    font-weight:500;
+    color:hsl(224, 23%, 55%);
+}
+
+.img-box img{
+    width:100%;
+    height:100%;
+    border-radius:15px 15px 0px 0px;
+}
+
+.rest-of-the-box{
+    padding:2rem;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+.text-box{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    gap:1rem;
+    margin :0 1rem 1rem 1rem;
+    
+}
+
+.text-box p{
+    font-size: 14px;
+}
+
+.plan-details{
+    width:100%;
+    display:flex;
+    background-color:hsl(225, 100%, 98%);
+    padding:1.1rem;
+    display:flex;
+    align-items:center;
+    border-radius:10px;
+    font-size:1rem;
+    justify-content: space-between;
+
+}
+
+.plan-details img{
+    transform:scale(0.8);
+}
+
+.plan-details a{
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+    font-size:12px;
+}
+
+.planX{
+    display:flex;
+    align-items: center;
+    gap:4px;
+}
+
+.plan{
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+}
+
+.plan h2{
+    font-weight: 900;
+    font-size:13px;
+}
+
+.plan p{
+    font-size:12px;
+}
+
+.proceed-to-payment-btn{
+    width:100%;
+    height:2.7rem;
+    color:white;
+    font-size: 12px;
+    background:hsl(245, 75%, 52%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    padding:1rem 0;
+    margin:1.2rem 0;
+    box-shadow: 0 15px 10px hsl(225, 100%, 94%)
+
+}
+
+.proceed-to-payment-btn a {
+    color:white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.cancel-order-btn a{
+    color:#7280a7;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+@media all and (max-width: 375px){
+    .container::before{
+        background-image:url("pattern-background-mobile.svg");
+        transform:translateY(4rem);
+    }
+}
